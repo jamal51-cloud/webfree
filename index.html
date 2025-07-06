@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bayar ke JURAGAN MOD</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://i.ibb.co/bgsFgZL/bg-juragan.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8);
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #00ffe5;
+    }
+
+    .dana-number {
+      font-size: 20px;
+      font-weight: bold;
+      background: #111;
+      padding: 12px;
+      border-radius: 10px;
+      margin: 20px 0;
+      letter-spacing: 1px;
+    }
+
+    button {
+      background: #00aaff;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0080cc;
+    }
+
+    a {
+      color: #00ffe5;
+      text-decoration: none;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-attachment: scroll;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PAY TO JURAGAN MOD</h1>
+    <p>Transfer pembayaran ke nomor DANA:</p>
+    <div class="dana-number" id="dana">0838 3033 0486</div>
+    <button onclick="copyDANA()">Salin Nomor DANA</button>
+    <p class="info">Kirim bukti transfer ke WA: <br><a href="https://wa.me/6283830330486" target="_blank">Chat Juragan</a></p>
+  </div>
+
+  <script>
+    function copyDANA() {
+      const dana = document.getElementById("dana").innerText.replace(/\s/g, "");
+      navigator.clipboard.writeText(dana);
+      alert("Nomor DANA disalin: " + dana);
+    }
+  </script>
+</body>
+</html>
