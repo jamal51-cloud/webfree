@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bayar ke JURAGAN MOD</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       padding: 0;
       font-family: 'Orbitron', sans-serif;
-      background: url('https://i.ibb.co/bgsFgZL/bg-juragan.jpg') no-repeat center center fixed;
+      background: url('https://img1.pixhost.to/images/7021/619277202_skyzo.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
     }
 
     .container {
@@ -34,6 +60,17 @@
       font-size: 28px;
       margin-bottom: 10px;
       color: #00ffe5;
+      text-shadow: 0 0 8px #00ffe5, 0 0 16px #00ffe5;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00ffe5, 0 0 10px #00ffe5;
+      }
+      to {
+        text-shadow: 0 0 15px #00ffe5, 0 0 30px #00ffe5;
+      }
     }
 
     .dana-number {
@@ -79,6 +116,8 @@
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <div class="container">
     <h1>PAY TO JURAGAN MOD</h1>
     <p>Transfer pembayaran ke nomor DANA:</p>
@@ -93,6 +132,24 @@
       navigator.clipboard.writeText(dana);
       alert("Nomor DANA disalin: " + dana);
     }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 40},
+        "color": {"value": "#00ffe5"},
+        "shape": {"type": "circle"},
+        "opacity": {"value": 0.4},
+        "size": {"value": 3},
+        "line_linked": {"enable": true, "distance": 100, "color": "#00ffe5", "opacity": 0.3, "width": 1},
+        "move": {"enable": true, "speed": 2}
+      },
+      "interactivity": {
+        "events": {"onhover": {"enable": true, "mode": "repulse"}}
+      }
+    });
   </script>
 </body>
 </html>
